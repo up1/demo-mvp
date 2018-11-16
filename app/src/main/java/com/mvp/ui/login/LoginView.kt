@@ -1,7 +1,6 @@
-package com.es.developine.ui.login
+package com.mvp.ui.login
 
-import android.widget.EditText
-import com.es.developine.ui.IView
+import com.mvp.ui.IView
 
 interface LoginView: IView {
 

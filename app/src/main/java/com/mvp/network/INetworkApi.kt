@@ -1,7 +1,6 @@
-package com.es.developine.network
+package com.mvp.network
 
-import com.es.developine.data.PostData
-import com.google.gson.JsonElement
+import com.mvp.data.PostData
 import io.reactivex.Observable
 import retrofit2.http.GET
 

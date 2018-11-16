@@ -1,4 +1,4 @@
-package com.es.developine.ui
+package com.mvp.ui
 
 interface IView{
 

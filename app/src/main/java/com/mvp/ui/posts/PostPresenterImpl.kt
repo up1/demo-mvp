@@ -1,16 +1,14 @@
-package com.es.developine.ui.posts
+package com.mvp.ui.posts
 
 import android.app.Application
-import com.es.developine.ApplicationClass
-import com.es.developine.di.component.ApplicationComponent
-import com.es.developine.network.INetworkApi
-import com.es.developine.ui.Preseneter
+import com.mvp.ApplicationClass
+import com.mvp.network.INetworkApi
+import com.mvp.ui.Preseneter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.internal.schedulers.IoScheduler
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class PostPresenterImpl(var postView: PostView, var applicationComponent: Application) : PostPresenter,Preseneter<PostView>(postView) {
+class PostPresenterImpl(var postView: PostView, var applicationComponent: Application) : PostPresenter, Preseneter<PostView>(postView) {
 
     @Inject
     lateinit var mNetworkApi: INetworkApi

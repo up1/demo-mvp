@@ -1,10 +1,10 @@
-package com.es.developine.di.module
+package com.mvp.di.module
 
 import android.util.Log
-import com.es.developine.BuildConfig
-import com.es.developine.network.INetworkApi
+import com.mvp.network.INetworkApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.mvp.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -13,7 +13,6 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Singleton
 
 @Module
 class NetModule {
@@ -42,6 +41,7 @@ class NetModule {
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
+//                .baseUrl("http://10.0.2.2:8882/").build()
                 .baseUrl("https://jsonplaceholder.typicode.com/").build()
     }
 
@@ -70,7 +70,7 @@ class NetModule {
             val request = chain.request()
             val builder = request.newBuilder()
 
-            if (headers != null && headers.size > 0) {
+            if (headers.size > 0) {
                 for ((key, value) in headers) {
                     builder.addHeader(key, value)
                     Log.e(key, value)

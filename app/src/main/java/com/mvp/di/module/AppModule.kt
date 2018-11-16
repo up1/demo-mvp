@@ -1,4 +1,4 @@
-package com.es.developine.di.module
+package com.mvp.di.module
 
 import android.app.Application
 import dagger.Module

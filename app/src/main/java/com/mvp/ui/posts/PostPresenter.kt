@@ -1,4 +1,4 @@
-package com.es.developine.ui.posts
+package com.mvp.ui.posts
 
 interface PostPresenter {
 

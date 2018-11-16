@@ -1,7 +1,6 @@
-package com.es.developine.ui
+package com.mvp.ui
 
 import android.support.annotation.CallSuper
-import android.support.annotation.Nullable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 

@@ -1,21 +1,14 @@
-package com.es.developine.ui
+package com.mvp.ui
 
 import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.provider.Settings
 import android.support.annotation.LayoutRes
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import com.es.developine.R
-import com.google.gson.Gson
-import retrofit2.HttpException
-import java.net.ConnectException
-import java.net.SocketTimeoutException
-import java.net.UnknownHostException
+import com.mvp.R
 
-abstract class BaseActivity : AppCompatActivity(),IView {
+abstract class BaseActivity : AppCompatActivity(), IView {
 
     /**
      * A dialog showing a progress indicator and an optional text message or

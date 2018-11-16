@@ -1,14 +1,9 @@
-package com.es.developine.ui.login
+package com.mvp.ui.login
 
-import android.app.Application
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import com.es.developine.ApplicationClass
-import com.es.developine.R
-import com.es.developine.network.INetworkApi
-import com.es.developine.ui.BaseActivity
-import javax.inject.Inject
+import com.mvp.R
+import com.mvp.ui.BaseActivity
 
 class LoginActivity : BaseActivity(), LoginView {
 
@@ -26,7 +21,7 @@ class LoginActivity : BaseActivity(), LoginView {
     }
 
 
-    fun getPresenter():LoginPresenterImpl?{
+    fun getPresenter(): LoginPresenterImpl?{
        loginPresenter = LoginPresenterImpl(this, application)
         return loginPresenter
     }

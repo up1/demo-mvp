@@ -1,12 +1,12 @@
-package com.es.developine.ui.adapters
+package com.mvp.ui.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.es.developine.R
-import com.es.developine.data.PostData
+import com.mvp.R
+import com.mvp.data.PostData
 import kotlinx.android.synthetic.main.post_list_item.view.*
 
 class PostItemAdapter(val postItems: List<PostData>, val context: Context) : RecyclerView.Adapter<PostItemAdapter.ViewHolder>() {
@@ -19,7 +19,7 @@ class PostItemAdapter(val postItems: List<PostData>, val context: Context) : Rec
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return postItems.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
